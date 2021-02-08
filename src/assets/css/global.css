@@ -1,4 +1,15 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+  
+
 :root {
   --royal-blue: #0b2a90;
   --golden-yellow: #fec049;
+  --indigo-blue: #004777;
+  --prussian-blue: #003152;
+  
+}
+
+.font-title {
+  font-family: 'Hammersmith One', sans-serif;
 }

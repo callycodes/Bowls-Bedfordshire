@@ -2,6 +2,24 @@
   <div id="home">
     <div class="example w-100">
     </div>
+
+    <h1>Hi</h1>
+    <h1>Hi</h1>
+    <h1>Hi</h1>
+    <h1>Hi</h1>
+    <h1>Hi</h1>
+    <h1>Hi</h1>
+    <h1>Hi</h1>
+    <h1>Hi</h1>
+    <h1>Hi</h1>
+    <h1>Hi</h1>
+    <h1>Hi</h1>
+    <h1>Hi</h1>
+    <h1>Hi</h1>
+    <h1>Hi</h1>
+
+     <div class="example w-100">
+    </div>
   </div>
   
 </template>
@@ -18,9 +36,10 @@ export default {
 <style scoped>
 
 .example {
-  height: 800px;
-  background: url('https://scontent-lhr8-2.xx.fbcdn.net/v/t1.0-9/33519263_730656387128498_2014180559055486976_n.jpg?_nc_cat=105&ccb=2&_nc_sid=110474&_nc_ohc=2m8aRwDwOrEAX_IFfbZ&_nc_ht=scontent-lhr8-2.xx&oh=a585735102427d5982db3f82384c843b&oe=6045C70A') no-repeat center center fixed;
+  height: 40em;
+  background: url('https://scontent.fman3-1.fna.fbcdn.net/v/t31.0-8/20248277_611582895702515_4495672608741714710_o.jpg?_nc_cat=102&ccb=2&_nc_sid=e007fa&_nc_ohc=TKnWJF0E3BAAX9U-xPS&_nc_ht=scontent.fman3-1.fna&oh=77584e38256f10f05220c9a245f6b644&oe=604551E6') no-repeat center center fixed;
   background-size: cover;
+  width: 100%;
 }
 
 </style>
