@@ -1,24 +1,25 @@
 <template>
   <div id="app">
+    <TopNav/>
     <router-view/>
   </div>
 </template>
 
 <script>
+import TopNav from './components/Navs/TopNav/Top'
+
 export default {
   name: 'App',
   components: {
+    TopNav
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 100px;
+  
+  
 }
 </style>
