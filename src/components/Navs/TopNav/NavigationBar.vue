@@ -15,14 +15,19 @@
 
   <div id="menu-section">
     <div class="nav-menu-container">
-    <b-nav id="nav-menu" class="font-title align-items-center" fill>
-    <b-nav-item active>Home</b-nav-item>
-    <b-nav-item>News</b-nav-item>
-    <b-nav-item>Officers</b-nav-item>
-    <b-nav-item>Competitions</b-nav-item>
-    <b-nav-item>Teams & Fixtures</b-nav-item>
-    <b-nav-item>Leagues</b-nav-item>
-  </b-nav>
+    <b-nav v-if="isDesktop()" id="nav-menu" class="font-title align-items-center" fill>
+      <b-nav-item active>Home</b-nav-item>
+      <b-nav-item>News</b-nav-item>
+      <b-nav-item>Officers</b-nav-item>
+      <b-nav-item>Competitions</b-nav-item>
+      <b-nav-item>Teams & Fixtures</b-nav-item>
+      <b-nav-item>Leagues</b-nav-item>
+    </b-nav>
+
+    <b-nav class="small-menu font-title align-items-center" v-else fill>
+      <b-nav-item active><b-icon icon="justify"></b-icon> Menu</b-nav-item>
+    </b-nav>
+
   </div>
   </div>
 </div>
@@ -31,10 +36,39 @@
 <script>
 
 export default {
+
+  methods: {
+    isDesktop() {
+      return this.$store.state.window.width > 1220;
+    }
+  }
 }
 </script>
 
 <style lang="css">
+
+
+.small-menu {
+  height: 80px;
+  font-size: 1.3em;
+}
+
+.small-menu li a {
+    background-color: var(--indigo-blue) !important;
+    color: white;
+    float: right;
+    margin-right: 2.5vw;
+    display: flex;
+}
+
+.small-menu li a:hover {
+    border-bottom: 5px var(--golden-yellow) solid;
+}
+
+.small-menu li a svg {
+  margin-right: 5px;
+  fill: white;
+}
 
 #navigation-bar {
   height: 80px;

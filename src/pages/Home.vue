@@ -1,8 +1,12 @@
 <template>
   <div id="home">
-    <div class="example w-100">
+    <div class="welcome-image w-100">
+      <img :src="photos.main"/>
     </div>
 
+    <!--<div v-html="getDB.collection('information').doc('home').get().data()"></div>-->
+    <h1>Test: <span v-html="information.welcome"></span></h1>
+    
     <h1>Hi</h1>
     <h1>Hi</h1>
     <h1>Hi</h1>
@@ -26,20 +30,44 @@
 
 <script>
 
+import { db } from '../firebase'
+
 export default {
+  data () {
+    return {
+      information: 'nice',
+      photos: []
+    }
+  },
+  methods: {
+  
+  },
   components: {
+  },
+  firestore () {
+    return {
+      information: db.collection('information').doc('home'),
+      photos: db.collection('photos').doc('home')
+    }
   }
+
+
 
 }
 </script>
 
 <style scoped>
 
-.example {
+.welcome-image {
   height: 40em;
-  background: url('https://scontent.fman3-1.fna.fbcdn.net/v/t31.0-8/20248277_611582895702515_4495672608741714710_o.jpg?_nc_cat=102&ccb=2&_nc_sid=e007fa&_nc_ohc=TKnWJF0E3BAAX9U-xPS&_nc_ht=scontent.fman3-1.fna&oh=77584e38256f10f05220c9a245f6b644&oe=604551E6') no-repeat center center fixed;
   background-size: cover;
   width: 100%;
+  overflow: hidden;
 }
 
+.welcome-image img {
+  height: 100%;
+  width: 100%;
+  object-fit:cover;
+}
 </style>
