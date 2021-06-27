@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from './pages/Home.vue'
+import Competitions from './pages/Competitions.vue'
 
 Vue.use(VueRouter)
 
@@ -12,6 +13,11 @@ const router = new VueRouter({
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/competitions',
+    name: 'Competitions',
+    component: Competitions
   }
   ]
   /* ,

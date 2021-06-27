@@ -16,16 +16,16 @@
   <div id="menu-section">
     <div class="nav-menu-container">
     <b-nav v-if="isDesktop()" id="nav-menu" class="font-title align-items-center" fill>
-      <b-nav-item active>Home</b-nav-item>
-      <b-nav-item>News</b-nav-item>
+      <b-nav-item active><router-link to="/">Home</router-link></b-nav-item>
+      <b-nav-item><router-link to="/news">News</router-link></b-nav-item>
       <b-nav-item>Officers</b-nav-item>
-      <b-nav-item>Competitions</b-nav-item>
+      <b-nav-item><router-link to="/competitions">Competitions</router-link></b-nav-item>
       <b-nav-item>Teams & Fixtures</b-nav-item>
       <b-nav-item>Leagues</b-nav-item>
     </b-nav>
 
     <b-nav class="small-menu font-title align-items-center" v-else fill>
-      <b-nav-item active><b-icon icon="justify"></b-icon> Menu</b-nav-item>
+      <b-nav-item @click="showFullMenu" active><b-icon icon="justify"></b-icon> Menu</b-nav-item>
     </b-nav>
 
   </div>
@@ -38,6 +38,9 @@
 export default {
 
   methods: {
+    showFullMenu() {
+      this.$store.dispatch('setMenu', 'show');
+    },
     isDesktop() {
       return this.$store.state.window.width > 1220;
     }

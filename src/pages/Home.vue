@@ -7,23 +7,28 @@
     <!--<div v-html="getDB.collection('information').doc('home').get().data()"></div>-->
     <h1>Test: <span v-html="information.welcome"></span></h1>
     
-    <h1>Hi</h1>
-    <h1>Hi</h1>
-    <h1>Hi</h1>
-    <h1>Hi</h1>
-    <h1>Hi</h1>
-    <h1>Hi</h1>
-    <h1>Hi</h1>
-    <h1>Hi</h1>
-    <h1>Hi</h1>
-    <h1>Hi</h1>
-    <h1>Hi</h1>
-    <h1>Hi</h1>
-    <h1>Hi</h1>
-    <h1>Hi</h1>
+    <h1>Wow</h1>
+    <h1>Wow</h1>
+    <h1>Wow</h1>
+    <h1>Wow</h1>
+    <h1>Wow</h1>
+    <h1>Wow</h1>
+    <h1>Wow</h1>
+    <h1>Wow</h1>
+    <h1>Wow</h1>
+    <h1>Wow</h1>
+    <h1>Wow</h1>
+    <h1>Wow</h1>
+    <h1>Wow</h1>
+    <h1>Wow</h1>
+    <h1>Wow</h1>
+    <h1>Wow</h1>
+    <h1>Wow</h1>
+    <h1>Wow</h1>
+    <h1>Wow</h1>
+    
+    <h1>Wow</h1>
 
-     <div class="example w-100">
-    </div>
   </div>
   
 </template>
